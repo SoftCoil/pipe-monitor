@@ -25,7 +25,7 @@ Options:
 ```
 
 ## Binary Release
-You can download the latest binary release for Linux here: [https://github.com/morrica/pipe-monitor/releases](https://github.com/morrica/pipe-monitor/releases)
+You can download the latest binary release for Linux here: [https://github.com/SoftCoil/pipe-monitor/releases](https://github.com/SoftCoil/pipe-monitor/releases)
 
 ## Build From Source
 
