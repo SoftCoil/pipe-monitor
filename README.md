@@ -24,6 +24,18 @@ Options:
 
 ```
 
+## Binary Release
+You can download the latest binary release for Linux here: [https://github.com/morrica/pipe-monitor/releases](https://github.com/morrica/pipe-monitor/releases)
+
+## Build From Source
+
+Set up your local golang environment, then clone this repository and run `make` in the project directory.
+
+`$ cd pipe-monitor`  
+`$ make`
+
+The "pm" binary will be build and saved in the pipe-monitor/bin directory.
+
 ## Examples
 
 Pipe Monitor can read from stdin, in which case it will not print out any size related data:
