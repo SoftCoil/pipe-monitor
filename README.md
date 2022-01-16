@@ -29,7 +29,7 @@ You can download the latest binary release for Linux here: [https://github.com/m
 
 ## Build From Source
 
-Set up your local golang environment, then clone this repository and run `make` in the project directory.
+Set up your local golang environment, then clone this repository and run the make command from the project root directory.
 
 `$ cd pipe-monitor`  
 `$ make`
