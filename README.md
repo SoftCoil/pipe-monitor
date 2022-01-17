@@ -56,7 +56,7 @@ Processed 2540335104 bytes. 36864 bytes buffered. Running 8s
 Or it can read from a file, in which case it will print out more detailed information that requires knowing the size 
 beforehand:
 ```
-# pm zero_file > zero_file2
+# pm zero_file > out_file
 Processed 0 bytes of 2609664000 (0% complete). 0 bytes buffered. Running 0s, eta: <unknown>
 Processed 1673056256 bytes of 2609664000 (64% complete). 4665344 bytes buffered. Running 2s, eta: 1s
 Processed 2008084480 bytes of 2609664000 (76% complete). 5181440 bytes buffered. Running 4s, eta: 1s
@@ -67,7 +67,7 @@ Processed 2609664000 bytes of 2609664000 (100% complete). 0 bytes buffered. Runn
 
 If you wish to read from stdin, but know the total size, you can provide it:
 ```
-# pm --size 2609664000 zero_file > zero_file2
+# cat zero_file | pm --size 2609664000 > out_file
 Processed 0 bytes of 2609664000 (0% complete). 0 bytes buffered. Running 0s, eta: <unknown>
 Processed 1673056256 bytes of 2609664000 (64% complete). 4665344 bytes buffered. Running 2s, eta: 1s
 Processed 2008084480 bytes of 2609664000 (76% complete). 5181440 bytes buffered. Running 4s, eta: 1s
@@ -78,7 +78,7 @@ Processed 2609664000 bytes of 2609664000 (100% complete). 0 bytes buffered. Runn
 
 All output can be controlled with a provided format string:
 ```
-# pm --format "Copy file zero_file: %written completed. Eta is %eta"  zero_file > zero_file2
+# pm --format "Copy file zero_file: %written completed. Eta is %eta"  zero_file > out_file
 Copy file zero_file: 0 completed. Eta is <unknown>
 Copy file zero_file: 1602396160 completed. Eta is 1s
 Copy file zero_file: 1921900544 completed. Eta is 1s
