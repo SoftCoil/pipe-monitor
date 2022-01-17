@@ -25,7 +25,8 @@ Options:
 ```
 
 ## Binary Release
-You can download the latest binary release for Linux here: [https://github.com/SoftCoil/pipe-monitor/releases](https://github.com/SoftCoil/pipe-monitor/releases)
+Binary releases are provided for 45 OS/CPU Architecture combinations. You can download the latest binary
+release here: [https://github.com/SoftCoil/pipe-monitor/releases](https://github.com/SoftCoil/pipe-monitor/releases)
 
 ## Build From Source
 
