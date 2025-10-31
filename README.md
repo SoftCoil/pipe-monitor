@@ -9,7 +9,7 @@ environments where a console is not available.
 ## Usage Synopsis
 Run with --help flag for usage:
 ```
-# pm --help
+$ pm --help
 Usage: pm [--size SIZE] [--name NAME] [--format FORMAT] INPUT_FILE
 
 Positional arguments:
@@ -41,7 +41,7 @@ The "pm" binary will be build and saved in the pipe-monitor/bin directory.
 
 Pipe Monitor can read from stdin, in which case it will not print out any size related data:
 ```
-# cat /dev/zero | pm > zero_file
+$ cat /dev/zero | pm > zero_file
 Processed 0 bytes. 0 bytes buffered. Running 0s
 Processed 1601699840 bytes. 0 bytes buffered. Running 2s
 Processed 1989455872 bytes. 20480 bytes buffered. Running 4s
@@ -49,14 +49,14 @@ Processed 2271846400 bytes. 24576 bytes buffered. Running 6s
 Processed 2540335104 bytes. 36864 bytes buffered. Running 8s
 ^Csignal: interrupt
 
-# ls -l zero_file
+$ ls -l zero_file
 -rw-rw-r-- 1 root root 2609664000 Jan  2 19:23 zero_file
 ```
 
 Or it can read from a file, in which case it will print out more detailed information that requires knowing the size 
 beforehand:
 ```
-# pm zero_file > out_file
+$ pm zero_file > out_file
 Processed 0 bytes of 2609664000 (0% complete). 0 bytes buffered. Running 0s, eta: <unknown>
 Processed 1673056256 bytes of 2609664000 (64% complete). 4665344 bytes buffered. Running 2s, eta: 1s
 Processed 2008084480 bytes of 2609664000 (76% complete). 5181440 bytes buffered. Running 4s, eta: 1s
@@ -67,7 +67,7 @@ Processed 2609664000 bytes of 2609664000 (100% complete). 0 bytes buffered. Runn
 
 If you wish to read from stdin, but know the total size, you can provide it:
 ```
-# cat zero_file | pm --size 2609664000 > out_file
+$ cat zero_file | pm --size 2609664000 > out_file
 Processed 0 bytes of 2609664000 (0% complete). 0 bytes buffered. Running 0s, eta: <unknown>
 Processed 1673056256 bytes of 2609664000 (64% complete). 4665344 bytes buffered. Running 2s, eta: 1s
 Processed 2008084480 bytes of 2609664000 (76% complete). 5181440 bytes buffered. Running 4s, eta: 1s
@@ -78,7 +78,7 @@ Processed 2609664000 bytes of 2609664000 (100% complete). 0 bytes buffered. Runn
 
 All output can be controlled with a provided format string:
 ```
-# pm --format "Copy file zero_file: %written completed. Eta is %eta"  zero_file > out_file
+$ pm --format "Copy file zero_file: %written completed. Eta is %eta"  zero_file > out_file
 Copy file zero_file: 0 completed. Eta is <unknown>
 Copy file zero_file: 1602396160 completed. Eta is 1s
 Copy file zero_file: 1921900544 completed. Eta is 1s
